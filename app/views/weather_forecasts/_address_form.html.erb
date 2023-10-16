@@ -1,0 +1,23 @@
+<%=form_for address, url: weather_forecasts_path, method: "GET" do |addy| %>
+  <label>Street address </label>
+  <div class="mb-3">
+    <%= addy.text_field :street, value: address.street %>
+  </div>
+
+  <label>City </label>
+  <div class="mb-3">
+    <%= addy.text_field :city, value: address.city %>
+  </div>
+
+  <label>State </label>
+  <div class="mb-3">
+    <%= addy.text_field :state, value: address.state, maxlength: 2 %>
+  </div>
+
+  <label>Zip </label>
+  <div class="mb-3">
+    <%= addy.number_field :zip, value: address.zip, required: true, max: 99950, min: 501 %>
+  </div>
+
+  <%= addy.submit "Weather Me!", class: "btn btn-info" %>
+<%end%>

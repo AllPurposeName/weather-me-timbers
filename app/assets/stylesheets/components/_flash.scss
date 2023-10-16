@@ -1,0 +1,6 @@
+.flash {
+  padding-top: 7px;
+  &__message {
+    animation: appear-then-fade 6s both;
+  }
+}

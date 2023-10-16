@@ -1,0 +1,10 @@
+<% flash.each do |type, msg| %>
+  <div
+      class="flash__message alert alert-<%= type == "info" ? "info" : "danger" %>"
+    role="alert"
+    data-controller="removals"
+    data-action="animationend->removals#remove"
+    >
+    <%= msg %>
+  </div>
+<% end %>
