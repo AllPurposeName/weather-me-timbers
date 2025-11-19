@@ -1,11 +1,13 @@
 # Weather Me Timbers
-## Description As per the requirements, this is a simple
+## Description
+As per the requirements, this is a simple
 weather retrieval app with zip code caching, basic error handling, and a
 function over form UI. Behind the scenes we have no database usage (still added
 a DB in case an extension or something required it), bootstrap, UI tests (no e2e
 or integration)
 
-## Setup Disclaimer, I did not try to run this on another machine, but it seems
+## Setup Disclaimer
+I did not try to run this on another machine, but it seems
 vanilla enough. Rails 7.1.1 Ruby 3.1.2 run bundle bundle exec rspec 8 examples
 should pass
 
@@ -14,7 +16,8 @@ Edit credentials: ```VISUAL="nvim" bin/rails credentials:edit``` and add a
 https://www.visualcrossing.com/sign-up Sign up is free and takes like 2 minutes,
 don't be a baby.
 
-## Design & Architecture & Patterns & Cromulence My goals here were: 1 speed and
+## Design & Architecture & Patterns & Cromulence
+My goals here were: 1 speed and
 2 easy to understand code with few dependencies.
 
 Our entry point is a single route, no post or anything like that. Very simply we
@@ -38,7 +41,8 @@ the app: ``` flash.now[:info] = "This result was retrieved from the cache!"
 flash.now[:alert] = "The cache was set!" flash.now[:alert] = "Something went
 wrong!\nMake sure your address is correct!" ```
 
-## What I would do different in hindsight/with more time "Include a UI" tells me
+## What I would do different in hindsight/with more time
+"Include a UI" tells me
 it is not a priority. If I had more time to tinker, I would have tried out
 stimulus and tailwindcss which are all the hotness right now. Maybe I would have
 thrown together Angular 2 or some other JS framework I haven't yet used.
@@ -62,7 +66,8 @@ would actually zap a bunch of my time. Especially since I know I would go back
 and forth on which columsn to use for the flex box and colors, and ooh maybe an
 icon...
 
-## Final thoughts As someone who once used weather apps multiple times a day as
+## Final thoughts
+As someone who once used weather apps multiple times a day as
 part of my job, I found it annoying that an address was expected as an input.
 Most weather apps work off of their own specific zones, or more commonly, zip
 codes. The caching keyed off of zip codes, so why addresses are part of this at
