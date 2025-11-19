@@ -1,4 +1,5 @@
-# Weather Me Timbers ## Description As per the requirements, this is a simple
+# Weather Me Timbers
+## Description As per the requirements, this is a simple
 weather retrieval app with zip code caching, basic error handling, and a
 function over form UI. Behind the scenes we have no database usage (still added
 a DB in case an extension or something required it), bootstrap, UI tests (no e2e
